@@ -33,7 +33,7 @@ function Home() {
       <div className="container">
         <section className="hero">
           <h1>Welcome to MovieJoy</h1>
-          <p>Discover your next favorite movie</p>
+          <p>Where every movie night starts. Discover trending films, explore detailed movie information, and find your next favorite movie in just a few clicks. MovieJoy is designed for movie lovers who enjoy exploring stories, genres, and unforgettable cinematic moments.</p>
         </section>
 
         <section className="featured-section">
