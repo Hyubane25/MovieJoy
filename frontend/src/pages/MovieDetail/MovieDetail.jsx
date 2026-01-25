@@ -13,7 +13,7 @@ function MovieDetail() {
   const navigate = useNavigate()
   const [movie, setMovie] = useState(null)
   const [loading, setLoading] = useState(true)
-
+  
   // Fetch movie details on component mount
   useEffect(() => {
     const fetchMovieDetail = async () => {
