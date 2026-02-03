@@ -34,6 +34,19 @@ function Movies() {
     movie.title.toLowerCase().includes(searchTerm.toLowerCase())
   )
 
+  const handleDelete = async (id) => {
+    if (window.confirm('Are you sure you want to delete this movie?')) {
+      try {
+        await api.delete(`/movies/${id}`)
+        setMovies(movies.filter((movie) => movie.id !== id))
+        alert('Movie deleted successfully')
+      } catch (error) {
+        console.error('Error deleting movie:', error)
+        alert('Error deleting movie')
+      }
+    }
+  }
+
   return (
     <div className="movies-page">
       <div className="container">
@@ -65,6 +78,7 @@ function Movies() {
                 <h3>{movie.title}</h3>
                 <p>{movie.year}</p>
                 <p className="rating">Rating: {movie.rating || 'N/A'}</p>
+                <button className="delete-button" onClick={(e) => { e.preventDefault(); handleDelete(movie.id) }}>Delete</button>
               </Link>
             ))}
           </div>

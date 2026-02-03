@@ -4,6 +4,7 @@ import Header from './components/Header/Header'
 import Home from './pages/Home/Home'
 import Movies from './pages/Movies/Movies'
 import MovieDetail from './pages/MovieDetail/MovieDetail'
+import AddMovie from './pages/AddMovie/AddMovie'
 import './App.css'
 
 /**
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/movies" element={<Movies />} />
           <Route path="/movies/:id" element={<MovieDetail />} />
+          <Route path="/add-movie" element={<AddMovie />} />
         </Routes>
       </div>
     </Router>
